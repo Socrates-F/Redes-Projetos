@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TcpServer</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="styles.css" />
+
+		<style>*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		  }
+		  
+		  body {
+			  background-color: rgba(6, 62, 126, 0.877);
+			  display: flex;
+			  flex-direction: column;
+			  align-items: center;
+			  justify-content: center;
+			  height: 100vh;
+			  width: 98vw;
+			  padding: 50px;
+		  }
+		  header{
+			  background-color: #1a1919a9;
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  width: 100%;
+			  height: 40px;
+			  color: #dad8d8;
+			  display: flex;
+			  justify-content: center;
+			  align-items:  center;
+			  font-size: 24px;
+			  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			  box-shadow: 1px 5px 6px rgba(0, 0, 0, 0.76); 
+    		  text-shadow: -2px 1px 1.5px rgba(184, 183, 183, 0.575);
+
+			  
+				
+		  }
+		  
+		  .quadrado {
+			  width: 81%;
+			  height: 80vh;
+			  background-color: #004075;
+			  background-image: url("https://advogadodestartups.com.br/wp-content/uploads/2020/06/TIC-brasil.jpg");
+			  background-repeat: no-repeat;
+			  background-position: center;
+			  background-size: contain;
+			  padding: 50px;
+			  display: grid;
+			  grid-template-columns: 1fr 1fr;
+			  gap: 30px;
+			  place-items: center;
+		  }
+		  
+		  .grid {
+			  display: grid;
+			  width: 100%;
+			  grid-template-columns: 1fr 1fr;
+			  gap: 30px;
+		  }
+		  
+		  .card {
+			  display: flex;
+			  flex-direction: column;
+			  background-color: hsla(207, 98%, 18%, 0.5);
+			  color: #fff;
+			  text-align: center;
+			  box-shadow: 5px 5px 10px #252525de;
+			  max-width: 220px;
+			  min-height: 200px;
+			  max-height:200px;
+			  padding: 5px;
+			  gap: 12px;
+			  border-radius: 5px;
+		  
+		  }
+		  
+		  .img {
+			  min-width: 100px;
+			  height: 100px;
+			  background-color: orangered;
+			  border-radius: 50%;
+		  }
+		  
+		  .description {
+			 color: #c5c4c4;
+			 font-size: 15px;
+			 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			 text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.678);
+
+		  }
+		  </style>
+	</head>
+	<body>
+        <header> Sobre Redes no Brasil </header>
+        
+        <div class="quadrado">
+            <div class="card">
+				<i class="fa-solid fa-location-dot fa-2x"></i>
+				<p class="description">
+					Apesar do surgimento da internet em 1960, somente no ano de 1988 que a rede chegou ao Brasil e graças à 
+					iniciativa da RNP( Rede Nacional de Pesquisa ) foi possível que em 1995 ocorresse a abertura da internet
+					comercial. 
+				</p>
+			</div>			
+            <div class="card">
+				<i class="fa-solid fa-chart-line fa-2x"></i>
+				<p class="description">
+					Segundos pesquisas, as estatísticas sobre a porcentagem da populaçao que acessou a internet aumentou para 
+					84% no ano de 2023, um aumento significativo visto que a porcentagem se mantinha em 81% desde 2020.
+					
+				</p>
+			</div>			
+            <div class="card">
+				<i class="fa-solid fa-wifi fa-2x"></i>
+				<p class="description">
+					A velocidade da internet em 2024 até o momento foi de 188,4 Mbps, apontam estudos. Esse valor representa um
+					aumento de quase 6% na média apresentada no último semestre de 2023, com média de 177,86 Mbps.
+				</p>
+			</div>			
+            <div class="card">
+				<i class="fa-solid fa-landmark-dome fa-2x"></i>
+				<p class="description">
+					A "ANATEL", Agencia Nacional de Telecomunicações, é o órgão público responsável pela administração 
+					das telecomunicações do país, ela visa atender o interesse público e o desenvolvimento das 
+					telecomunicações.
+				</p>
+			</div>
+        </div>
+		<!-- <div class="grid">
+			<div class="card">
+				<div class="img"></div>
+				<p class="description">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem totam unde voluptates sequi aperiam.
+					Perferendis eveniet cupiditate quod expedita, distinctio
+					itaque similique veniam libero cumque minus repellendus
+					doloribus iusto quas.
+				</p>
+			</div>
+            <div class="card">
+				<div class="img"></div>
+				<p class="description">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem totam unde voluptates sequi aperiam.
+					Perferendis eveniet cupiditate quod expedita, distinctio
+					itaque similique veniam libero cumque minus repellendus
+					doloribus iusto quas.
+				</p>
+			</div>
+			<div class="card">
+				<div class="img"></div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem totam unde voluptates sequi aperiam.
+					Perferendis eveniet cupiditate quod expedita, distinctio
+					itaque similique veniam libero cumque minus repellendus
+					doloribus iusto quas.
+				</p>
+			</div>
+			<div class="card">
+				<div class="img"></div>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Exercitationem totam unde voluptates sequi aperiam.
+					Perferendis eveniet cupiditate quod expedita, distinctio
+					itaque similique veniam libero cumque minus repellendus
+					doloribus iusto quas.
+				</p>
+			</div>
+		</div> -->
+	</body>
+</html>
